@@ -1,0 +1,50 @@
+    <view class='remind_txt_remind'>
+    <i-row>
+      <i-col span="24">温馨提示：参会过程中如果遇到任何问题，可以点击下方“拨打电话”按钮联系会务组相关负责人；</i-col>
+    </i-row>
+  </view>
+  
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">会务负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="13911518775">
+      <i-col span="6" i-class="remind_txt_title_list">欧晔</i-col>
+      <i-col span="18" i-class="remind_txt_content">13911518775
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">会场负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="13701323459">
+      <i-col span="6" i-class="remind_txt_title_list">庞齐</i-col>
+      <i-col span="18" i-class="remind_txt_content">13701323459
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">签到、住宿负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="13911774925">
+      <i-col span="6" i-class="remind_txt_title_list">杜娟</i-col>
+      <i-col span="18" i-class="remind_txt_content">13911774925
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">医药负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="18601045581">
+      <i-col span="6" i-class="remind_txt_title_list">张前坤</i-col>
+      <i-col span="18" i-class="remind_txt_content">18601045581
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>

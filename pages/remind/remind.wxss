@@ -1,0 +1,51 @@
+/* pages/remind/remind.wxss */
+.remind_content{
+  padding: 10px 10px 10px 10px ;
+  background-color: rgba(237, 236, 232,0.3);
+  margin: 10px 10px 10px 10px;
+}
+.remind_txt_remind{
+  padding: 10px 10px 10px 10px ;
+  background-color: rgba(237, 236, 232,0.3);
+  margin: 10px 10px 10px 10px;
+  font-size: 14px;
+  line-height: 35px;
+  color: #3aba90;
+}
+.remind_map_title{
+  font-size: 14px;
+  text-align: left;
+  color: #2d70f6;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 35px;
+}
+.remind_txt{
+  padding: 10px 10px 10px 10px ;
+  background-color: rgba(237, 236, 232,0.3);
+  margin: 10px 10px 10px 10px;
+  font-size: 14px;
+}
+.remind_txt_title{
+   font-size: 14px;
+  text-align: left;
+  color: #2d70f6;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 35px;
+}
+.remind_txt_row{
+  font-size: 14px;
+  line-height: 35px;
+  text-align: left;
+  border-bottom:1px dashed rgba(84,92,99,0.1);
+}
+.remind_txt_service_row{
+  font-size: 14px;
+  line-height: 35px;
+  text-align: left;
+  border-top:1px dashed rgba(84,92,99,0.1);
+}
+.group_img{
+ width: 100%;
+}

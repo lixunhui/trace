@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-panel": "../../dist/panel/index"
+  },
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "",
+  "backgroundColor": "#fff"
+}

@@ -1,0 +1,186 @@
+<!--pages/main/main.wxml-->
+<!--大会议程  -->
+<view wx:if="{{homepage}}" class='tab_homepage'>
+  <view class='context' wx:for="{{item}}" wx:key="{{index}}" wx:for-item="value">
+    <i-row i-class="apply_info_row">
+      <i-col span="6" i-class="success-col">汇报主题：</i-col>
+      <i-col span="18" i-class="success-col  text">{{value.itemSubject}}</i-col>
+    </i-row>
+    <i-row i-class="apply_info_row">
+      <i-col span="6" i-class="success-col">演讲嘉宾：</i-col>
+      <i-col span="18" i-class="success-col text">{{value.itemSpeaker}}</i-col>
+    </i-row>
+    <i-row i-class="apply_info_row">
+      <i-col span="6" i-class="success-col">开始时间：</i-col>
+      <i-col span="18" i-class="success-col  text">{{value.itemTime}}</i-col>
+    </i-row>
+    <i-row i-class="apply_info_row bottom">
+      <i-col span="8" i-class="success-col" offset="16">
+        <form bindsubmit='formapply' report-submit='true' data-id="{{index}}">
+          <input type='text' value="{{value.id}}" name="itemId" class="id_input" />
+          <button type='primary' id='sub_{{value.id}}' class="{{value.state?'sub_disable':'sub'}}" form-type='submit' size="default">{{value.state?"已订阅":"订阅提醒"}}</button>
+        </form>
+      </i-col>
+    </i-row>
+  </view>
+  <i-toast id="toast" />
+</view>
+<!--会场指引  -->
+<view wx:if="{{remind}}" class='tab_remind'>
+  <view class='remind_content'>
+    <i-row>
+      <i-col span="24" i-class="remind_map_title">会场平面图</i-col>
+    </i-row>
+    <i-row>
+      <image src="http://cdnpublic.eggworld.com.cn/map.png" mode="aspectFill" class='group_img'></image>
+    </i-row>
+  </view>
+  <view class='remind_txt_remind'>
+    <i-row>
+      <i-col span="24">温馨提示：近日北京地区昼夜温差较大，并不时伴有微风情况，提醒您出行注意防风保暖，谨防感冒；</i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">签到指引</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5月3日：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请到1号楼会议中心签到</i-col>
+    </i-row>
+    <i-row class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5月4日：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请到3号楼水晶宫入口处签到</i-col>
+    </i-row>
+  </view>
+
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">用餐指引</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">4日 早餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">1号楼玫瑰厅</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">4日 午餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请随工作人员指引前往1号楼玫瑰厅用餐</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">4日 晚宴：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请随工作人员指引前往玉兰厅参加晚宴</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5日 早餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">1号楼玫瑰厅</i-col>
+    </i-row>
+    <i-row class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5日 午餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请随工作人员指引前往1号楼玫瑰厅用餐</i-col>
+    </i-row>
+  </view>
+
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">交通指引</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">北京站：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(票价6元，约65分钟)步行1350米天通苑南A出乘坐地铁5号线，乘坐9站到达雍和宫站，换乘地铁2号线外环，乘坐5站即到北京站；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">北京西站：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(票价6元，约90分钟)步行1350米天通苑南A出乘坐地铁5号线，乘坐16站到达达磁器口站，换乘地铁7号线乘坐8站即到北京西站；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">北京南站：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(票价6元，约90分钟)步行1350米天通苑南A出乘坐地铁5号线，乘坐18站到蒲黄榆下车,换乘地铁14号线乘坐3站即到北京南站；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">首都机场：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(约90分钟)步行655米到天通西苑一区北门乘坐乘坐机场大巴回龙观线4站即到北京首都国际机场；</i-col>
+    </i-row>
+    <i-row class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">南苑机场：</i-col>
+      <i-col span="18" i-class="remind_txt_content">步行1350米天通苑南A出乘坐地铁5号线，乘坐20站到达宋家庄站，换乘地铁10号线外环到角门西下车，乘坐机场大巴开往北京南苑机场；</i-col>
+    </i-row>
+  </view>
+</view>
+<!--会务服务 -->
+<view wx:if="{{mine}}" class='tab_mine'>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">总负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="13911518775">
+      <i-col span="6" i-class="remind_txt_title_list">欧晔</i-col>
+      <i-col span="18" i-class="remind_txt_content">13911518775
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">会场负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="13701323459">
+      <i-col span="6" i-class="remind_txt_title_list">庞齐</i-col>
+      <i-col span="18" i-class="remind_txt_content">13701323459
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">签到、住宿负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="13911774925">
+      <i-col span="6" i-class="remind_txt_title_list">杜娟</i-col>
+      <i-col span="18" i-class="remind_txt_content">13911774925
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">医药负责人</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_service_row" bindtap="callPhone" data-phone="18601045581">
+      <i-col span="6" i-class="remind_txt_title_list">张前坤</i-col>
+      <i-col span="18" i-class="remind_txt_content">18601045581
+        <span class="contact_phone">拨打电话</span>
+      </i-col>
+    </i-row>
+  </view>
+</view>
+
+<!--照片直播-->
+<view wx:if="{{group}}" class='tab_group'>
+  <!-- 在页面上放一个隐藏区域，并用image组件去加载一个或多个图片资源 -->
+<view style="display:none">
+  <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.url}}"  class="img_item" bindload="onImageLoad" bindtap="previewImage" data-src="{{item.url}}"></image>
+</view>
+  <scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages">
+  <view style="width:100%">
+    <view class="img_item">
+      <view wx:for="{{col1}}" wx:key="id">
+        <image src="{{item.url}}" data-src="{{item.url}}" style="width:100%;height:{{item.height}}px" bindtap="previewImage"></image>
+      </view>
+    </view>
+    <view class="img_item">
+      <view wx:for="{{col2}}" wx:key="id">
+        <image src="{{item.url}}" data-src="{{item.url}}"  style="width:100%;height:{{item.height}}px" bindtap="previewImage"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+</view>
+
+<view class='TabBar'>
+  <i-tab-bar current="{{ current }}" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="other" current-icon="other" title="会议议程"></i-tab-bar-item>
+    <i-tab-bar-item key="remind" icon="flag" current-icon="flag_fill" title="会场指引"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="customerservice" current-icon="customerservice_fill" title="会务服务"></i-tab-bar-item>
+    <i-tab-bar-item key="group" icon="live" current-icon="live_fill" title="照片直播"></i-tab-bar-item>
+  </i-tab-bar>
+</view>

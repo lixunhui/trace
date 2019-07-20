@@ -1,0 +1,37 @@
+ <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">活动1：朋友圈集赞赢取神秘大礼</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">1、请于大会吉祥物拍照合影,并发送合影照加上关于中国安全蛋品大会主题的一句话至微信朋友圈集赞；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">2、5月4日19:00~19:30（19:30后发送将视为无效）将您的朋友圈集赞数量截图发送至“蛋e网官方报价”公众号，我们的工作人员将会进行收集统计。</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">3、全场嘉宾集赞前7位将获得神秘礼品，第一名将获得由大会提供的神秘大奖一份。</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">4、大奖揭晓时间：5月4日 20:19</i-col>
+    </i-row>
+  </view>
+
+
+<!-- 活动2 -->
+   <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">活动2：照片墙互动赢大礼</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">1、签到时可与大会背景拍摄照片（工作人员会配合您完成），照片拍摄完成后工作人员会将您的照片打印并黏贴在照片墙上；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">2、会议结束后您可将自己的照片取回带走作为参会留念。</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">3、我们将在5天内在照片中随机抽取6位幸运嘉宾并赠送神秘礼品一份。</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="24" i-class="remind_txt_title_list">4、抽奖结果及兑奖方式将在“蛋e网官方报价”公众号中公布，记得及时查阅哦；</i-col>
+   </i-row>
+  </view>

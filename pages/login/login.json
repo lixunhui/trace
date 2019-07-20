@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText":"会议签到",
+  "usingComponents": {
+    "i-input": "../../dist/input/index",
+    "i-button": "../../dist/button/index",
+    "i-panel": "../../dist/panel/index",
+    "i-toast": "../../dist/toast/index",
+    "i-alert": "../../dist/alert/index",
+    "i-sticky": "../../dist/sticky/index",
+    "i-sticky-item": "../../dist/sticky-item/index",
+    "i-icon": "../../dist/icon/index",
+    "i-grid": "../../dist/grid/index",
+    "i-grid-item": "../../dist/grid-item/index"
+  }
+}

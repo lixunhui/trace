@@ -1,0 +1,41 @@
+<!--参会信息-->
+<view class="logo">
+  <i-row>
+    <i-col span="24">
+      <image class="bg-image" src="../image/success.png" mode="scaleToFill"></image>
+    </i-col>
+    <i-col span="24">签到成功 </i-col>
+  </i-row>
+</view>
+
+<view class='info'>
+  <i-row i-class="apply_info_row">
+    <i-col span="7" i-class="success-col">会议主题：</i-col>
+    <i-col span="17" i-class="success-col text">{{meeting_name}}</i-col>
+  </i-row>
+  <i-row i-class="apply_info_row">
+    <i-col span="7" i-class="success-col">会议时间：</i-col>
+    <i-col span="17" i-class="success-col text">{{meeting_time}}</i-col>
+  </i-row>
+  <i-row i-class="apply_info_row">
+    <i-col span="7" i-class="success-col">参会地点：</i-col>
+    <i-col span="17" i-class="success-col text">{{meeting_location}}</i-col>
+  </i-row>
+  <i-row i-class="apply_info_row">
+    <i-col span="7" i-class="success-col">参会嘉宾：</i-col>
+    <i-col span="17" i-class="success-col text">{{apply_user}}</i-col>
+  </i-row>
+  <i-row i-class="apply_info_row">
+    <i-col span="7" i-class="success-col">温馨提示：</i-col>
+    <i-col span="17" i-class="success-col text">参会过程中如有任何问题可随时联系您的专属联系人</i-col>
+  </i-row>
+  <i-row i-class="apply_info_row2">
+    <i-col span="24" i-class="success-col">与会场吉祥物合照发送朋友圈集赞，活动结束后集赞数量最多的前7位将获得神秘大礼一份；</i-col> 
+  </i-row>
+
+</view>
+<view class='look'>
+  <form bindsubmit='formapply' report-submit='true'>
+    <button type="primary" class='button' form-type='submit' bind:click="formSubmit" size="default">进入会场</button>
+  </form>
+</view>

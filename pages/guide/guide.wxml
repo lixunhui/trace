@@ -1,0 +1,83 @@
+<!--pages/guide/guide.wxml-->
+<image src='http://meet.eggworld.net/meet_logo.jpg' class='meet_img'></image>
+<view class='context'>
+<!-- 会议议程 -->
+  <i-row>
+    <i-col span="10" i-class="col-class">
+      <i-icon type="createtask" size='22' /> 会议议程
+    </i-col>
+    <i-col span="14" i-class="col-class-button">
+      <form bindsubmit='formapply' report-submit='true'>
+        <button type="primary" form-type='submit' bind:click="formSubmit" data-guide='1' class='button'>
+          <i-icon type="enter" /> </button>
+      </form>
+    </i-col>
+  </i-row>
+<!-- 会议指引 -->
+   <i-row>
+    <i-col span="10" i-class="col-class">
+      <i-icon type="flag" size='22' /> 会议指引
+    </i-col>
+    <i-col span="14" i-class="col-class-button">
+      <form bindsubmit='formapply' report-submit='true'>
+        <button type="primary" form-type='submit' bind:click="formSubmit" data-guide='2' class='button'>
+          <i-icon type="enter" /> </button>
+      </form>
+    </i-col>
+  </i-row>
+
+<!-- 会务服务 -->
+   <i-row>
+    <i-col span="10" i-class="col-class">
+      <i-icon type="customerservice" size='22' /> 会务服务
+    </i-col>
+    <i-col span="14" i-class="col-class-button">
+      <form bindsubmit='formapply' report-submit='true'>
+        <button type="primary" form-type='submit' bind:click="formSubmit" data-guide='3' class='button'>
+          <i-icon type="enter" /> </button>
+      </form>
+    </i-col>
+  </i-row>
+  
+<!-- 照片直播 -->
+   <i-row>
+    <i-col span="10" i-class="col-class">
+      <i-icon type="live" size='22' /> 照片直播
+    </i-col>
+    <i-col span="14" i-class="col-class-button">
+      <form bindsubmit='formapply' report-submit='true'>
+        <button type="primary" form-type='submit' bind:click="formSubmit" data-guide='4' class='button'>
+          <i-icon type="enter" /> </button>
+      </form>
+    </i-col>
+  </i-row>
+
+<!-- 座位安排  -->
+   <i-row>
+    <i-col span="10" i-class="col-class">
+      <i-icon type="addressbook" size='22' /> 座位安排
+    </i-col>
+    <i-col span="14" i-class="col-class-button">
+      <form bindsubmit='formapply' report-submit='true'>
+        <button type="primary" form-type='submit' bind:click="formSubmit" data-guide='6' class='button'>
+          <i-icon type="enter" /> </button>
+      </form>
+    </i-col>
+  </i-row>
+
+<!-- 参与活动赢大奖 -->
+   <i-row>
+    <i-col span="12" i-class="col-class">
+      <i-icon type="redpacket" size='22' />参与活动赢大奖
+    </i-col>
+    <i-col span="12" i-class="col-class-button">
+      <form bindsubmit='formapply' report-submit='true'>
+        <button type="primary" form-type='submit' bind:click="formSubmit" data-guide='5' class='button'>
+          <i-icon type="enter" /> </button>
+      </form>
+    </i-col>
+  </i-row>
+</view>
+<view class='info'>
+  <span>蛋e网提供技术支持</span>
+</view>

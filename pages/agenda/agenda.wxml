@@ -1,0 +1,24 @@
+<!--pages/agenda/agenda.wxml-->
+ <view class='context' wx:for="{{item}}" wx:key="{{index}}" wx:for-item="value">
+    <i-row i-class="apply_info_row">
+      <i-col span="6" i-class="success-col">汇报主题：</i-col>
+      <i-col span="18" i-class="success-col  text">{{value.itemSubject}}</i-col>
+    </i-row>
+    <i-row i-class="apply_info_row">
+      <i-col span="6" i-class="success-col">演讲嘉宾：</i-col>
+      <i-col span="18" i-class="success-col text">{{value.itemSpeaker}}</i-col>
+    </i-row>
+    <i-row i-class="apply_info_row">
+      <i-col span="6" i-class="success-col">开始时间：</i-col>
+      <i-col span="18" i-class="success-col  text">{{value.itemTime}}</i-col>
+    </i-row>
+    <i-row i-class="apply_info_row bottom">
+      <i-col span="8" i-class="success-col" offset="16">
+        <form bindsubmit='formapply' report-submit='true' data-id="{{index}}">
+          <input type='text' value="{{value.id}}" name="itemId" class="id_input" />
+          <button type='primary' id='sub_{{value.id}}' class="{{value.state?'sub_disable':'sub'}}" form-type='submit' size="default">{{value.state?"已订阅":"订阅提醒"}}</button>
+        </form>
+      </i-col>
+    </i-row>
+  </view>
+  <i-toast id="toast" />

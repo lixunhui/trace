@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/meegtinginfo/info",
+    "pages/test/test",
+    "pages/main/main",
+    "pages/guide/guide",
+    "pages/agenda/agenda",
+    "pages/remind/remind",
+    "pages/service/service",
+    "pages/live/live",
+    "pages/game/game",
+    "pages/set/set"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "第四届中国安全蛋品产业生态大会",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

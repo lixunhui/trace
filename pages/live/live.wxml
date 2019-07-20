@@ -1,0 +1,18 @@
+<!-- 在页面上放一个隐藏区域，并用image组件去加载一个或多个图片资源 -->
+<view style="display:none">
+  <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.url}}"  class="img_item" bindload="onImageLoad" bindtap="previewImage" data-src="{{item.url}}"></image>
+</view>
+  <scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages">
+  <view style="width:100%">
+    <view class="img_item">
+      <view wx:for="{{col1}}" wx:key="id">
+        <image src="{{item.url}}" data-src="{{item.url}}" style="width:100%;height:{{item.height}}px" bindtap="previewImage"></image>
+      </view>
+    </view>
+    <view class="img_item">
+      <view wx:for="{{col2}}" wx:key="id">
+        <image src="{{item.url}}" data-src="{{item.url}}"  style="width:100%;height:{{item.height}}px" bindtap="previewImage"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,16 @@
+    <view class='remind_txt_remind'>
+    <i-row>
+      <i-col span="24">温馨提示：会议作为可能根据到场人员情况随时会有调整，下方座位安排仅作参照，请您听从会务工作人员安排，按照指引入席就座；</i-col>
+    </i-row>
+  </view>
+  
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">会议座位：{{userset}}</i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">晚宴座位：{{dinner}}</i-col>
+    </i-row>
+  </view>

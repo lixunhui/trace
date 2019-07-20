@@ -1,0 +1,84 @@
+<!--pages/remind/remind.wxml-->
+  <view class='remind_content'>
+    <i-row>
+      <i-col span="24" i-class="remind_map_title">会场平面图</i-col>
+    </i-row>
+    <i-row>
+      <image src="http://cdnpublic.eggworld.com.cn/map_new.png" mode="aspectFill" class='group_img'></image>
+    </i-row>
+  </view>
+  <view class='remind_txt_remind'>
+    <i-row>
+      <i-col span="24">温馨提示：近日北京地区昼夜温差较大，并不时伴有微风情况，提醒您出行注意防风保暖，谨防感冒；</i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">签到指引</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5月3日：</i-col>
+      <i-col span="18" i-class="remind_txt_content">1号楼会议中心签到办理入住手续</i-col>
+    </i-row>
+    <i-row class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5月4日：</i-col>
+      <i-col span="18" i-class="remind_txt_content">3号楼水晶宫入口处签到参会</i-col>
+    </i-row>
+  </view>
+
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">用餐指引</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">4日 早餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请前往1号楼玫瑰厅用餐</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">4日 午餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请前往1号楼玫瑰厅用餐</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">4日 晚宴：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请前往1号楼玉兰厅参加晚宴</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5日 早餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请前往1号楼玫瑰厅</i-col>
+    </i-row>
+    <i-row class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">5日 午餐：</i-col>
+      <i-col span="18" i-class="remind_txt_content">请前往1号楼玫瑰厅用餐</i-col>
+    </i-row>
+  </view>
+
+  <view class='remind_txt'>
+    <i-row>
+      <i-col span="24" i-class="remind_txt_title">交通指引</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">北京站：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(票价6元，约65分钟)步行1350米天通苑南A出乘坐地铁5号线，乘坐9站到达雍和宫站，换乘地铁2号线外环，乘坐5站即到北京站；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">北京西站：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(票价6元，约90分钟)步行1350米天通苑南A出乘坐地铁5号线，乘坐16站到达达磁器口站，换乘地铁7号线乘坐8站即到北京西站；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">北京南站：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(票价6元，约90分钟)步行1350米天通苑南A出乘坐地铁5号线，乘坐18站到蒲黄榆下车,换乘地铁14号线乘坐3站即到北京南站；</i-col>
+    </i-row>
+    <i-row i-class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">首都机场：</i-col>
+      <i-col span="18" i-class="remind_txt_content">(约90分钟)步行655米到天通西苑一区北门乘坐乘坐机场大巴回龙观线4站即到北京首都国际机场；</i-col>
+    </i-row>
+    <i-row class="remind_txt_row">
+      <i-col span="6" i-class="remind_txt_title_list">南苑机场：</i-col>
+      <i-col span="18" i-class="remind_txt_content">步行1350米天通苑南A出乘坐地铁5号线，乘坐20站到达宋家庄站，换乘地铁10号线外环到角门西下车，乘坐机场大巴开往北京南苑机场；</i-col>
+    </i-row>
+  </view>
+  <view class='remind_txt_remind'>
+    <i-row>
+      <i-col span="24">温馨提示：北京南站晚上打的不便的，18:00至次日00:30期间，在北广场，可以通过微信“小程序”搜索、添加“北京订制公交”，同方向的3人即可出发；</i-col>
+    </i-row>
+  </view>
