@@ -1,16 +1,16 @@
 <!--index.wxml-->
 
 <view class="container">
-  <panel class="title">第四届中国安全蛋品</panel>
-  <panel class="title_2">产业生态大会</panel>
+  <panel class="title">蛋源追溯系统</panel>
   <view class="logo">
-    <image src="../image/logo.png" mode="aspectFit" class='logopic'></image>
+    <image src="../image/trace_logo.png" mode="aspectFit" class='logopic'></image>
   </view>
-  <panel class="location">中国·北京</panel>
-  <panel class="date">2019.05.04</panel>
+
+  <panel class="authorization">需要您授权后使用</panel>
   <view class="userinfo">
 
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" size="default" class='button'>会议报到</button>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" size="default" class='button'>授权使用</button>
+    <panel class="explain">本系统由蛋e网提供技术支持</panel>
   </view>
   <view class="usermotto">
   </view>

@@ -16,9 +16,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "第四届中国安全蛋品产业生态大会",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#2e7d32",
+    "navigationBarTitleText": "蛋源追溯系统",
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -1,11 +1,9 @@
-<view class="i-sticky-demo-des">
-   <i-icon type="systemprompt" size="22" color="#ff9926" style='margin-right:10px;'></i-icon>温馨提示：会议将于2019年5月4日8:30正式开始，为了能更好的为您提供服务，请尽量提前到场签到，并正确填写个人信息；成功签到后会务工作人员将以微信服务通知的方式为您及时发送大会各项提示信息，请您注意查收；
-</view>
 <form bindsubmit='formapply' report-submit='true'>
  <i-panel title="">
-    <i-input value='{{username}}' title="参会人员" type='text' autofocus placeholder="参会人姓名" maxlength="10" bindchange='usernameInput' />
-    <i-input value='{{phone}}' title="联系电话" type="number" placeholder="参会人手机号码" maxlength="11" bindchange='phoneInput' />
-    <i-input value='{{company}}' title="参会企业" placeholder="参会企业名称" maxlength="20" bindchange='companyInput'/>
+    <i-input value='{{username}}' title="手机号码" type='text' autofocus placeholder="请输入登陆手机号码" maxlength="10" bindchange='usernameInput' />
+    <i-input value='{{phone}}' type="number" placeholder="请输入短信验证码" maxlength="11" bindchange='phoneInput'  class='smsCode'/>
+    <button class='sendSMSCode'>获取短信验证码</button>
+
     <button type="primary" class='button' form-type='submit' bind:click="formSubmit" size="default" >签到</button>
   </i-panel>
 </form>
