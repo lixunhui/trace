@@ -31,6 +31,36 @@ Page({
     })
   },
 
+  // 发送短信验证码
+  sendSMSCode:function(e){
+    console.log("点击发送短信验证码按钮，调用后台接口，发送短信");
+    wx.request({
+      url: util.host+'/wx/login/sendSms',
+      data:{
+        phone: that.data.phone,
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' //默认值
+      },
+      success:function(res){
+        
+      }
+    })
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
   /**
    * 用户点击会议签到，提交表单
    */

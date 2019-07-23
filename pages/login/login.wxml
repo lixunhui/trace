@@ -2,9 +2,9 @@
  <i-panel title="">
     <i-input value='{{username}}' title="手机号码" type='text' autofocus placeholder="请输入登陆手机号码" maxlength="10" bindchange='usernameInput' />
     <i-input value='{{phone}}' type="number" placeholder="请输入短信验证码" maxlength="11" bindchange='phoneInput'  class='smsCode'/>
-    <button class='sendSMSCode'>获取短信验证码</button>
+    <i-button id='sendSMSCode' bind:click="sendSMSCode">获取短信验证码</i-button>
 
-    <button type="primary" class='button' form-type='submit' bind:click="formSubmit" size="default" >签到</button>
+    <button type="primary" class='button' form-type='submit' bind:click="formSubmit" size="default" >登录</button>
   </i-panel>
 </form>
 <i-toast id="toast"/>
