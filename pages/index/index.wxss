@@ -43,12 +43,13 @@ line-height: 40px;
 margin-top: 20%;
 }
 .explain{
-color:#e8f5e9;
+color:#e0e0e0;
 font-size:13px;
 width:100%;
 text-align:center;
 letter-spacing:1px;
 line-height: 40px;
+margin-top: 35%;
 }
 
 .button{

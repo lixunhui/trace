@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText":"登陆",
+  "navigationBarTitleText":"登录",
   "usingComponents": {
     "i-input": "../../dist/input/index",
     "i-button": "../../dist/button/index",
