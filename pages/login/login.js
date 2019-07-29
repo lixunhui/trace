@@ -8,31 +8,99 @@ Page({
    * 页面的初始数据
    */
   data: { 
-    username:"",
     phone:"",
-    company:""
+    code:"",
+    send: false,
+    alreadySend: false,
+    second: 60,
+    disabled: true,
+    buttonType: 'default',
+    buttonclass:'disablebutton'
   },
 
-
-  usernameInput({ detail }){
-    this.setData({
-      username: detail.detail.value
-    })
-  },
-
+  /**
+   * 手机号码输入框，当输入长度大于11时，出现发送短信验证码的按钮
+   */
   phoneInput({ detail }){
+    let phone = detail.detail.value;
+    if (phone.length === 11){
+      console.log("手机号码："+phone);
+      this.showSendMsg();
+      this.activeButton();
+      this.setData({
+        phone:phone
+      });
+    }else{
+      this.hideSendMsg()
+    };
+  },
+
+/**
+ * 短信验证码输入框
+ */
+  smsCodeInput({detail}){
     this.setData({
-      phone: detail.detail.value
+        code: detail.detail.value
+      })
+    this.activeButton();
+  },
+
+  showSendMsg: function () {
+    if (!this.data.alreadySend) {
+      this.setData({
+        send: true
+      })
+    }
+  },
+
+  hideSendMsg: function () {
+    this.setData({
+      send: false,
+      disabled: true
     })
   },
-  companyInput({ detail }){
-    this.setData({
-      company: detail.detail.value
-    })
-  },
+
+
+  // 按钮
+  activeButton: function () {
+    var that = this;
+    var code = that.data.code;
+    var phone = that.data.phone;
+    if (phone && code) {
+      if(code.length==6){
+        this.setData({
+          disabled: false,
+          buttonType: 'primary',
+          buttonclass: 'button'
+        })
+      }else{
+        this.setData({
+          disabled: true,
+          buttonType: 'default',
+          buttonclass: 'disablebutton'
+        })
+      }
+    } else {
+      this.setData({
+        disabled: true,
+        buttonType: 'default',
+        buttonclass: 'disablebutton'
+      })
+    }},
+
 
   // 发送短信验证码
   sendSMSCode:function(e){
+    var that = this;
+    var phone = that.data.phone;
+    if (!(/^1[34578]\d{9}$/.test(phone))) {
+      $Toast({
+        content: '手机号码填写错误',
+        icon: 'emoji',
+        duration: 1
+      });
+      return false;
+    }
     console.log("点击发送短信验证码按钮，调用后台接口，发送短信");
     wx.request({
       url: util.host+'/wx/login/sendSms',
@@ -43,22 +111,37 @@ Page({
       header: {
         'content-type': 'application/x-www-form-urlencoded' //默认值
       },
-      success:function(res){
-        
+      success:function(res){ 
       }
     })
+    this.setData({
+      alreadySend: true,
+      send: false
+    })
+    this.timer()
   },
-
-
-
-
-
-
-
-
-
-
-
+  timer: function () {
+    let promise = new Promise((resolve, reject) => {
+      let setTimer = setInterval(
+        () => {
+          this.setData({
+            second: this.data.second - 1
+          })
+          if (this.data.second <= 0) {
+            this.setData({
+              second: 60,
+              alreadySend: false,
+              send: true
+            })
+            resolve(setTimer)
+          }
+        }
+        , 1000)
+    })
+    promise.then((setTimer) => {
+      clearInterval(setTimer)
+    })
+  },
 
 
   /**
@@ -149,4 +232,4 @@ Page({
       }
     })
   }
-})
+});

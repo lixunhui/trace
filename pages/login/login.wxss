@@ -17,7 +17,27 @@
   margin: 10px;
   color: #fff !important;
   background: #2e7d32 !important;
-  margin-top: 50px;
+  margin-top: 120px;
+}
+
+.disablebutton{
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+  letter-spacing:5px;
+  height: 44px;
+  line-height: 44px;
+  margin: 10px;
+  color: #C3C3C3 !important;
+  background: #e2e2e2 !important;
+  margin-top: 120px;
 }
 .username{
   border-bottom: solid red 1px;
