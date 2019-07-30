@@ -17,7 +17,7 @@
   margin: 10px;
   color: #fff !important;
   background: #2e7d32 !important;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 
 .disablebutton{
@@ -37,7 +37,7 @@
   margin: 10px;
   color: #C3C3C3 !important;
   background: #e2e2e2 !important;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 .username{
   border-bottom: solid red 1px;

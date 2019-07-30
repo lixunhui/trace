@@ -10,10 +10,11 @@ Page({
   data: { 
     phone:"",
     code:"",
-    send: false,
+    send: true,
     alreadySend: false,
     second: 60,
     disabled: true,
+    senddisable:true,
     buttonType: 'default',
     buttonclass:'disablebutton'
   },
@@ -48,15 +49,17 @@ Page({
   showSendMsg: function () {
     if (!this.data.alreadySend) {
       this.setData({
-        send: true
+        send: true,
+        senddisable: false
       })
     }
   },
 
   hideSendMsg: function () {
     this.setData({
-      send: false,
-      disabled: true
+      send: true,
+      disabled: true,
+      senddisable:true
     })
   },
 
@@ -151,59 +154,26 @@ Page({
     console.log("这里执行了表单formapply");
 
     var that = this;
-    var username = that.data.username;
     var phone = that.data.phone;
-    var company = that.data.company;
+    var code = that.data.code;
     var openid = wx.getStorageSync('openid');
     var unionid = wx.getStorageSync('unionid');
 
     console.log('form发生了submit事件，携带数据为', that.data.username, that.data.phone, that.data.company, openid,unionid);
 
-    // 这里进行表单验证
-    if (username === '') {
-      $Toast({
-        content: '请输入参会人姓名',
-        icon:'emoji',
-        duration: 1
-      });
-      return false;
-    }else if (phone === '') {
-      $Toast({
-        content: '请输入参会人电话',
-        icon: 'emoji',
-        duration: 1
-      });
-      return false;
-    }else if (!(/^1[34578]\d{9}$/.test(phone))) {
-        $Toast({
-          content: '手机号码填写错误',
-          icon: 'emoji',
-          duration: 1
-        });
-      return false;
-    }else if (company === '') {
-      $Toast({
-        content: '请输入参会企业',
-        icon: 'emoji',
-        duration: 1
-      });
-      return false;
-    };  
-
     //这里获取表单的formId，方便后续发送模板消息
     let formId=e.detail.formId;
-    wx.setStorageSync('fId', formId);
+    wx.setStorageSync('formId', formId);
 
     var userinfo = app.globalData.userInfo;
     console.log(userinfo);
 
     // 请求后台数据，上传报名签到信息
     wx.request({
-      url: util.host + '/wx/user/sign',
+      url: util.host + '/wx/user/login',
       data: {
-        username: that.data.username,
         phone: that.data.phone,
-        company: that.data.company,
+        code: that.data.code,
         openid: openid,
         unionid: unionid,
         nikename: userinfo.nickName,

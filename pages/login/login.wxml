@@ -2,8 +2,7 @@
  <i-panel title="">
     <i-input value='{{phone}}' title="手机号码" type='number' autofocus placeholder="请输入登陆手机号码" maxlength="11" bindchange='phoneInput' />
     <i-input value='{{code}}' type="number" placeholder="请输入短信验证码" maxlength="6" bindchange='smsCodeInput'  class='smsCode'/>
-    <!-- <i-button id='sendSMSCode' bind:click="sendSMSCode">发送短信验证码</i-button> -->
-    <i-button wx:if="{{send}}" bind:click="sendSMSCode">发送短信验证码</i-button>
+    <i-button wx:if="{{send}}" bind:click="sendSMSCode" disabled='{{senddisable}}'>发送短信验证码</i-button>
     <i-button wx:if="{{alreadySend}}" class='alreadySend' bind:click="sendSMSCode" disabled='true'>{{second+"s"}}</i-button>
 
     <button type="{{buttonType}}"  class="{{buttonclass}}" disabled="{{disabled}}" form-type='submit' bind:click="formSubmit" size="default">登录</button>
