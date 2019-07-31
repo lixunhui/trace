@@ -159,7 +159,7 @@ Page({
     var openid = wx.getStorageSync('openid');
     var unionid = wx.getStorageSync('unionid');
 
-    console.log('form发生了submit事件，携带数据为', that.data.username, that.data.phone, that.data.company, openid,unionid);
+    console.log('form发生了submit事件，携带数据为', that.data.username, that.data.code, openid,unionid);
 
     //这里获取表单的formId，方便后续发送模板消息
     let formId=e.detail.formId;
@@ -170,7 +170,7 @@ Page({
 
     // 请求后台数据，上传报名签到信息
     wx.request({
-      url: util.host + '/wx/user/login',
+      url: util.host + '/wx/login/verify',
       data: {
         phone: that.data.phone,
         code: that.data.code,
@@ -186,7 +186,7 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' //默认值
       },
       success(res) {
-        console.log(res.data);
+        console.log("请求返回结果："+res.data);
         //判断是否签到成功，成功则跳转
         if (res.data.code == 200) {
             wx.setStorageSync('username', that.data.username),
@@ -197,8 +197,30 @@ Page({
             wx.reLaunch({
               url: '../meegtinginfo/info',
             })
-        }
+        }else if(res.data.code == 39){
+          console.log("验证码错误或已使用，请重新获取");
+          $Toast({
+            content: '验证码错误或已使用，请重新获取',
+            icon: 'emoji',
+            duration: 1
+          });
 
+        }else if(res.data.code == 40){
+          console.log("验证码已过期，请重新获取");
+          $Toast({
+            content: '验证码已过期，请重新获取',
+            icon: 'emoji',
+            duration: 1
+          });
+        }
+      },
+      error(res){
+        console.log("请求失败，请稍后重试");
+        $Toast({
+          content: '网络连接失败，请稍后重试',
+          icon: 'emoji',
+          duration: 1
+        });
       }
     })
   }
