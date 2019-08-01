@@ -194,13 +194,15 @@ Page({
             wx.setStorageSync('company', that.data.company),
             wx.setStorageSync('avatar', userinfo.avatarUrl),
             wx.setStorageSync('sign', '1'),
+            //缓存用户信息，用户Type,用户ID
+            wx.setStorageSync('userType', '1')
             wx.reLaunch({
               url: '../meegtinginfo/info',
             })
         }else if(res.data.code == 39){
-          console.log("验证码错误或已使用，请重新获取");
+          console.log("验证码错误，请重新获取");
           $Toast({
-            content: '验证码错误或已使用，请重新获取',
+            content: '验证码错误，请重新获取',
             icon: 'emoji',
             duration: 1
           });
@@ -209,6 +211,20 @@ Page({
           console.log("验证码已过期，请重新获取");
           $Toast({
             content: '验证码已过期，请重新获取',
+            icon: 'emoji',
+            duration: 1
+          });
+        }else if(res.data.code == 41){
+          console.log("验证码已使用，请重新获取");
+          $Toast({
+            content: '验证码已使用，请重新获取',
+            icon: 'emoji',
+            duration: 1
+          });
+        }else if(res.data.code == 42){
+          console.log("用户不存在，请检查登陆手机号码是否正确");
+          $Toast({
+            content: '用户不存在，请检查登陆手机号码是否正确',
             icon: 'emoji',
             duration: 1
           });
