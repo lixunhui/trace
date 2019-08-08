@@ -1,0 +1,11 @@
+<view class="cu-bar tabbar bg-black">
+  <block wx:for='{{list}}' wx:key>
+    <view 
+          class="action {{index === active ? activeClass : normalClass  }}  {{item.action?'add-action':''}}" 
+          data-index="{{index}}"
+          bindtap='handleTabTap'>
+      <view class='{{item.icon}} {{item.action? "shadow "+  item.actionClass : "" }}' hover-class='tabhover' >
+      </view> {{item.text}}
+    </view>
+  </block>
+</view>

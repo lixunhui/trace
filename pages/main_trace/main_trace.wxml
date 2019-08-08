@@ -1,0 +1,4 @@
+<!--index/home/home.wxml-->
+<view class='content bg-orange'>
+  购物车
+</view>

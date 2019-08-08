@@ -12,7 +12,11 @@
     "pages/service/service",
     "pages/live/live",
     "pages/game/game",
-    "pages/set/set"
+    "pages/set/set",
+    "pages/main_brand/main_brand",
+    "pages/main_home/main_home",
+    "pages/main_trace/main_trace",
+    "pages/main_user/main_user"
   ],
   "window": {
     "backgroundTextStyle": "light",

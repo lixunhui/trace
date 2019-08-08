@@ -1,0 +1,16 @@
+
+<view class='page'>
+  <view class='header'>
+      <titlebar wx:if="{{customTitleBar}}" options="{{titleBarOptions}}" title="props设置的标题" icon='icon-back' ></titlebar> 
+      <slot name="header"></slot>
+  </view>
+  <view class='content' style='height:calc(100vh - {{CustomBar + StatusBar}}px );' bindtap="handleContentTap">
+   <!-- <view class='content' style='height:calc(100rpx + env(safe-area-inset-bottom) / 2);background:blue;'> -->
+     <slot name="{{activePage}}"></slot>
+  
+  </view>
+  <view class='footer'>
+    <tabbar wx:if="{{customTabbar}}" options="{{tabBarOptions}}"  bindchange="handleTabChange"></tabbar> 
+    <slot name="footer"> </slot> 
+  </view>
+</view>

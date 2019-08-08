@@ -1,0 +1,9 @@
+/* component/TitleBar/TitleBar.wxss */
+.title_bar_title{
+  /* background: red; */
+  width: 100%;
+  display: block;
+  position: fixed;
+  /* text-align: center; */
+  padding: 0px 60rpx;
+}

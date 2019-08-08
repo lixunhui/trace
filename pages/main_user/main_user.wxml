@@ -1,0 +1,4 @@
+<!--index/home/home.wxml-->
+<view class='content bg-green'>
+  个人中心
+</view>

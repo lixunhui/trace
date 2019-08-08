@@ -1,0 +1,8 @@
+{
+  
+  "component": true,
+  "usingComponents": {
+    "tabbar":"../Tabbar/Tabbar",
+    "titlebar":"../TitleBar/TitleBar"
+  }
+}

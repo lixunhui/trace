@@ -1,0 +1,12 @@
+/* component/Page/Page.wxss */
+.footer{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  /* background: red; */
+}
+.page{
+  height: 100vh;
+  width: 100vw;
+  /* background: greenyellow; */
+}

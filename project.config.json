@@ -41,68 +41,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 0,
 			"list": [
 				{
-					"id": 0,
-					"name": "参会证",
-					"pathName": "pages/meegtinginfo/info",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": -1,
-					"name": "申请",
-					"pathName": "pages/login/login",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "主页",
+					"name": "pages/main/main",
 					"pathName": "pages/main/main",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "会议服务",
-					"pathName": "pages/guide/guide",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "会议议程",
-					"pathName": "pages/agenda/agenda",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "会议指引",
-					"pathName": "pages/remind/remind",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "会务服务",
-					"pathName": "pages/service/service",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "照片直播",
-					"pathName": "pages/live/live",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "活动",
-					"pathName": "pages/game/game",
 					"query": "",
 					"scene": null
 				}

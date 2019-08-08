@@ -189,15 +189,15 @@ Page({
         console.log("请求返回结果："+res.data);
         //判断是否签到成功，成功则跳转
         if (res.data.code == 200) {
-            wx.setStorageSync('username', that.data.username),
-            wx.setStorageSync('phone', that.data.phone),
-            wx.setStorageSync('company', that.data.company),
-            wx.setStorageSync('avatar', userinfo.avatarUrl),
-            wx.setStorageSync('sign', '1'),
+          wx.setStorageSync('username', res.data.data.userName),
+            wx.setStorageSync('userId', res.data.data.userId),
+          wx.setStorageSync('phone', that.data.phone),
+          wx.setStorageSync('avatar', userinfo.avatarUrl),
+          wx.setStorageSync('sign', '1'),
             //缓存用户信息，用户Type,用户ID
-            wx.setStorageSync('userType', '1')
+            wx.setStorageSync('userType', res.data.data.userType)
             wx.reLaunch({
-              url: '../meegtinginfo/info',
+              url: '../main/main',
             })
         }else if(res.data.code == 39){
           console.log("验证码错误，请重新获取");

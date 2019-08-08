@@ -33,12 +33,12 @@ App({
             const sign = wx.getStorageSync('sign');
             //先判断用户是否签到过，如果签到过直接跳转到成功页面，如果没签到过，跳转到登陆页面
             if (sign == '1') {
-              console.log("用户已签到");
+              console.log("用户已登录");
               wx.navigateTo({
-                url: '../meegtinginfo/info',
+                url: '../main/main',
               })
             }
-            console.log("还没有签到，在这里点击会议报到吧");
+            console.log("还没有登录，在这里点击登录吧");
           }
         })
       }

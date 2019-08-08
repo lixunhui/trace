@@ -3,7 +3,7 @@
 const app = getApp()
 Page({
   data: {
-    motto: '第4届蛋品大会',
+    motto: '蛋源追溯系统',
     userInfo: {},
     hasUserInfo: false,
     sign: '',
@@ -56,7 +56,7 @@ Page({
     console.log("index.js 系统初始化，判断是否签到", sign);
     if ("1" == sign) {
       wx.reLaunch({
-        url: '../meegtinginfo/info'
+        url: '../main/main'
       })
     }
   },

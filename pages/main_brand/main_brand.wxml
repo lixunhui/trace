@@ -1,0 +1,4 @@
+<!--index/home/home.wxml-->
+<view class='content bg-yellow'>
+ 收藏
+</view>

@@ -1,0 +1,9 @@
+<view class="cu-custom {{class}}" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='{{icon}}'></text>
+    </navigator>
+    <view class='title_bar_title {{center?"text-center":""}}'>{{title}} </view> 
+
+  </view>
+</view>

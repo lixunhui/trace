@@ -1,0 +1,3 @@
+.tabhover{
+  opacity: .8;
+}
